@@ -11,7 +11,7 @@ class ProductPolicy
   end
 
   def update?
-    user.admin? || !post.published?
+    user.admin?
   end
 
   def destroy?
