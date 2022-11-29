@@ -6,6 +6,10 @@ class ProductPolicy
     @product = product
   end
 
+  def show?
+    false
+  end
+
   def update?
     user.admin? || !post.published?
   end
