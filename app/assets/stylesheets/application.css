@@ -1,0 +1,113 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.login {
+    display: flex;
+    height: 100%;
+}
+
+.login .img {
+    width: 45%;
+    background: #730E15;
+}
+
+.login section {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.login h2 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login .field {
+    width: max-content;
+}
+
+.login .field:not(.remember) {
+    display: flex;
+    flex-direction: inherit;
+    gap: 10px;
+}
+
+.login .field label:not(label[for="user_remember_me"]) {
+    font-size: 1.4rem;
+}
+
+.login .field input:focus {
+    outline: 2px solid #29c2ff;
+}
+
+.login .field input:not(input[type="checkbox"]) {
+    height: 45px;
+    width: 300px;
+    padding: 0 5px;
+
+    font-size: 1.2rem;
+
+    border: 1px solid #a9a9a9;
+    border-radius: 5px;
+}
+
+.login .actions input {
+    height: 45px;
+    width: 100%;
+
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: white;
+
+    background-color: #29c2ff;
+    border: 2px solid #2093c0;
+    border-radius: 5px;
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
